@@ -4,14 +4,16 @@ This is a clone from official [gRPC Go's Quickstart](https://grpc.io/docs/quicks
 
 ## Build
 
-### Prerequisite
+### Prerequisites
 
 * go 1.14 or later (shouldn't matter much but just in case)
 * libprotoc 3.11.4 (for protoc)
 
 ### Generate protobuf service definition
 
-```protoc -I proto proto/hello.proto --go_out=plugins=grpc:proto```
+```zsh
+protoc -I proto proto/hello.proto --go_out=plugins=grpc:proto
+```
 
 A new go file should be generated as ```proto/hello.pb.go``` that has the service definition in Go.
 
@@ -143,7 +145,7 @@ And on client side
 2020/03/25 22:18:20 Received response: Hello world
 ```
 
-To exit the server press Ctrl + C.
+To exit the server press Ctrl+C.
 
 ## Reference
 
